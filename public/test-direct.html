@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Direct POST</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6">
+        <h1 class="text-2xl font-bold mb-4">Test Direct POST</h1>
+        <p class="mb-4 text-sm text-gray-600">See form läheb otse public/index.php sisse, ilma routerita</p>
+        
+        <form method="POST" action="/framework/test-direct">
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" name="email" value="admin@example.com" class="w-full px-3 py-2 border rounded-lg">
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-2">Password</label>
+                <input type="password" name="password" value="password" class="w-full px-3 py-2 border rounded-lg">
+            </div>
+            <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+                Test Direct POST
+            </button>
+        </form>
+        
+        <hr class="my-6">
+        
+        <h2 class="text-lg font-bold mb-2">Testi ka:</h2>
+        <ul class="space-y-2">
+            <li>
+                <a href="/framework/test-direct" class="text-blue-500 hover:underline">GET /framework/test-direct</a> 
+                <span class="text-sm text-gray-500">(peaks näitama tühja lehte)</span>
+            </li>
+            <li>
+                <a href="/framework/test-form.php" class="text-blue-500 hover:underline">/framework/test-form.php</a>
+                <span class="text-sm text-gray-500">(see töötab)</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
